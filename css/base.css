@@ -1,0 +1,647 @@
+/* Base styles: colour tokens, layout, components, responsive + print rules */
+
+:root {
+  color-scheme: light dark;
+  /* Palette: Radix Colors (radix-ui.com/colors), 12-step scales.
+     1-2 backgrounds, 3-5 components, 6-8 borders, 9-10 solid fills, 11-12 text. */
+  --slate-1: #fcfcfd;
+  --slate-2: #f9f9fb;
+  --slate-3: #f0f0f3;
+  --slate-4: #e8e8ec;
+  --slate-5: #e0e1e6;
+  --slate-6: #d9d9e0;
+  --slate-7: #cdced6;
+  --slate-8: #b9bbc6;
+  --slate-9: #8b8d98;
+  --slate-10: #80838d;
+  --slate-11: #60646c;
+  --slate-12: #1c2024;
+  --blue-1: #fbfdff;
+  --blue-2: #f4faff;
+  --blue-3: #e6f4fe;
+  --blue-4: #d5efff;
+  --blue-5: #c2e5ff;
+  --blue-6: #acd8fc;
+  --blue-7: #8ec8f6;
+  --blue-8: #5eb1ef;
+  --blue-9: #0090ff;
+  --blue-10: #0588f0;
+  --blue-11: #0d74ce;
+  --blue-12: #113264;
+  --teal-1: #fafefd;
+  --teal-2: #f3fbf9;
+  --teal-3: #e0f8f3;
+  --teal-4: #ccf3ea;
+  --teal-5: #b8eae0;
+  --teal-6: #a1ded2;
+  --teal-7: #83cdc1;
+  --teal-8: #53b9ab;
+  --teal-9: #12a594;
+  --teal-10: #0d9b8a;
+  --teal-11: #008573;
+  --teal-12: #0d3d38;
+  --violet-1: #fdfcfe;
+  --violet-2: #faf8ff;
+  --violet-3: #f4f0fe;
+  --violet-4: #ebe4ff;
+  --violet-5: #e1d9ff;
+  --violet-6: #d4cafe;
+  --violet-7: #c2b5f5;
+  --violet-8: #aa99ec;
+  --violet-9: #6e56cf;
+  --violet-10: #654dc4;
+  --violet-11: #6550b9;
+  --violet-12: #2f265f;
+  --red-1: #fffcfc;
+  --red-2: #fff7f7;
+  --red-3: #feebec;
+  --red-4: #ffdbdc;
+  --red-5: #ffcdce;
+  --red-6: #fdbdbe;
+  --red-7: #f4a9aa;
+  --red-8: #eb8e90;
+  --red-9: #e5484d;
+  --red-10: #dc3e42;
+  --red-11: #ce2c31;
+  --red-12: #641723;
+  --amber-1: #fefdfb;
+  --amber-2: #fefbe9;
+  --amber-3: #fff7c2;
+  --amber-4: #ffee9c;
+  --amber-5: #fbe577;
+  --amber-6: #f3d673;
+  --amber-7: #e9c162;
+  --amber-8: #e2a336;
+  --amber-9: #ffc53d;
+  --amber-10: #ffba18;
+  --amber-11: #ab6400;
+  --amber-12: #4f3422;
+  --green-1: #fbfefc;
+  --green-2: #f4fbf6;
+  --green-3: #e6f6eb;
+  --green-4: #d6f1df;
+  --green-5: #c4e8d1;
+  --green-6: #adddc0;
+  --green-7: #8eceaa;
+  --green-8: #5bb98b;
+  --green-9: #30a46c;
+  --green-10: #2b9a66;
+  --green-11: #218358;
+  --green-12: #193b2d;
+  /* Accent scale. Person uses blue; doctor and hospital swap it below. */
+  --a1: var(--blue-1);
+  --a2: var(--blue-2);
+  --a3: var(--blue-3);
+  --a4: var(--blue-4);
+  --a5: var(--blue-5);
+  --a6: var(--blue-6);
+  --a7: var(--blue-7);
+  --a8: var(--blue-8);
+  --a9: var(--blue-9);
+  --a10: var(--blue-10);
+  --a11: var(--blue-11);
+  --a12: var(--blue-12);
+  --bg: var(--slate-3);
+  --pn: var(--slate-1);
+  --ink: var(--slate-12);
+  --mut: var(--slate-11);
+  --ln: var(--slate-6);
+  --ln-hi: var(--slate-7);
+  --ac: var(--a9);
+  --ac-ink: var(--a11);
+  --ring: var(--a10);
+  --sf: var(--a3);
+  --btn: var(--a11);
+  --btn-hover: var(--a12);
+  --on: #fff;
+  --bad: var(--red-11);
+  --bad-bg: var(--red-3);
+  --bad-bd: var(--red-7);
+  --wn: var(--amber-12);
+  --wn-bg: var(--amber-3);
+  --wn-bd: var(--amber-8);
+  --ok: var(--green-12);
+  --ok-bg: var(--green-3);
+  --ok-bd: var(--green-7);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --slate-1: #111113;
+    --slate-2: #18191b;
+    --slate-3: #212225;
+    --slate-4: #272a2d;
+    --slate-5: #2e3135;
+    --slate-6: #363a3f;
+    --slate-7: #43484e;
+    --slate-8: #5a6169;
+    --slate-9: #696e77;
+    --slate-10: #777b84;
+    --slate-11: #b0b4ba;
+    --slate-12: #edeef0;
+    --blue-1: #0d1520;
+    --blue-2: #111927;
+    --blue-3: #0d2847;
+    --blue-4: #003362;
+    --blue-5: #004074;
+    --blue-6: #104d87;
+    --blue-7: #205d9e;
+    --blue-8: #2870bd;
+    --blue-9: #0090ff;
+    --blue-10: #3b9eff;
+    --blue-11: #70b8ff;
+    --blue-12: #c2e6ff;
+    --teal-1: #0d1514;
+    --teal-2: #111c1b;
+    --teal-3: #0d2d2a;
+    --teal-4: #023b37;
+    --teal-5: #084843;
+    --teal-6: #145750;
+    --teal-7: #1c6961;
+    --teal-8: #207e73;
+    --teal-9: #12a594;
+    --teal-10: #0eb39e;
+    --teal-11: #0bd8b6;
+    --teal-12: #adf0dd;
+    --violet-1: #14121f;
+    --violet-2: #1b1525;
+    --violet-3: #291f43;
+    --violet-4: #33255b;
+    --violet-5: #3c2e69;
+    --violet-6: #473876;
+    --violet-7: #56468b;
+    --violet-8: #6958ad;
+    --violet-9: #6e56cf;
+    --violet-10: #7d66d9;
+    --violet-11: #baa7ff;
+    --violet-12: #e2ddfe;
+    --red-1: #191111;
+    --red-2: #201314;
+    --red-3: #3b1219;
+    --red-4: #500f1c;
+    --red-5: #611623;
+    --red-6: #72232d;
+    --red-7: #8c333a;
+    --red-8: #b54548;
+    --red-9: #e5484d;
+    --red-10: #ec5d5e;
+    --red-11: #ff9592;
+    --red-12: #ffd1d9;
+    --amber-1: #16120c;
+    --amber-2: #1d180f;
+    --amber-3: #302008;
+    --amber-4: #3f2700;
+    --amber-5: #4d3000;
+    --amber-6: #5c3d05;
+    --amber-7: #714f19;
+    --amber-8: #8f6424;
+    --amber-9: #ffc53d;
+    --amber-10: #ffd60a;
+    --amber-11: #ffca16;
+    --amber-12: #ffe7b3;
+    --green-1: #0e1512;
+    --green-2: #121b17;
+    --green-3: #132d21;
+    --green-4: #113b29;
+    --green-5: #174933;
+    --green-6: #20573e;
+    --green-7: #28684a;
+    --green-8: #2f7c57;
+    --green-9: #30a46c;
+    --green-10: #33b074;
+    --green-11: #3dd68c;
+    --green-12: #b1f1cb;
+    --bg: var(--slate-1);
+    --pn: var(--slate-2);
+    --on: var(--slate-1);
+    --bad-bd: var(--red-8);
+    --wn-bd: var(--amber-7);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font:
+    15px/1.55 system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+}
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 0;
+  font-weight: 600;
+}
+h2 {
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  background: var(--pn);
+  border-bottom: 1px solid var(--ln);
+}
+header h1 {
+  font-size: 20px;
+  flex: 1;
+}
+header h1 span {
+  color: var(--ac-ink);
+}
+select,
+input,
+textarea,
+button {
+  font: inherit;
+  color: inherit;
+}
+select,
+input,
+textarea {
+  background: var(--bg);
+  border: 1px solid var(--ln-hi);
+  border-radius: 6px;
+  padding: 7px 9px;
+  width: 100%;
+}
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 1px;
+}
+header select {
+  width: auto;
+}
+.wrap {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+nav {
+  width: 200px;
+  padding: 12px 8px;
+  background: var(--pn);
+  border-right: 1px solid var(--ln);
+  overflow: auto;
+  flex: none;
+}
+nav button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-left: 3px solid transparent;
+  padding: 9px 12px;
+  cursor: pointer;
+  color: var(--mut);
+}
+nav button.on {
+  border-color: var(--ac);
+  color: var(--ink);
+  background: var(--sf);
+  font-weight: 600;
+}
+main {
+  flex: 1;
+  overflow: auto;
+  padding: 22px;
+  max-width: 1000px;
+}
+button.b {
+  background: var(--btn);
+  color: var(--on);
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+button.g {
+  background: none;
+  border: 1px solid var(--ln-hi);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+button.x {
+  background: none;
+  border: 0;
+  color: var(--bad);
+  cursor: pointer;
+}
+.sec {
+  background: var(--pn);
+  border: 1px solid var(--ln);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+label {
+  display: block;
+  font-size: 13px;
+  color: var(--mut);
+}
+label input,
+label select,
+label textarea {
+  margin-top: 3px;
+  color: var(--ink);
+}
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 9px 0;
+  border-top: 1px solid var(--ln);
+}
+.row:first-of-type {
+  border-top: 0;
+}
+.row > div {
+  flex: 1;
+  min-width: 0;
+}
+.m {
+  color: var(--mut);
+  font-size: 13px;
+}
+.tag {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 1px 9px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--slate-7);
+  background: var(--slate-3);
+  color: var(--ink);
+}
+.tag.Low,
+.tag.High {
+  color: var(--wn);
+  background: var(--wn-bg);
+  border-color: var(--wn-bd);
+}
+.tag.Normal {
+  color: var(--ok);
+  background: var(--ok-bg);
+  border-color: var(--ok-bd);
+}
+.red {
+  color: var(--bad);
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.st {
+  border-left: 4px solid var(--ac);
+  padding: 4px 12px;
+  background: var(--pn);
+  border-radius: 0 8px 8px 0;
+}
+.st b {
+  font:
+    600 24px Georgia,
+    serif;
+  display: block;
+}
+.chat {
+  height: 340px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 4px;
+}
+.msg {
+  max-width: 85%;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: var(--sf);
+}
+.msg.u {
+  align-self: flex-end;
+  background: var(--btn);
+  color: var(--on);
+}
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+#toast {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 9;
+}
+#toast div {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 10px 14px;
+  border-radius: 8px;
+  max-width: 320px;
+}
+dialog {
+  max-width: 640px;
+  width: 92%;
+  background: var(--pn);
+  color: var(--ink);
+  border: 1px solid var(--ln);
+  border-radius: 10px;
+}
+pre {
+  white-space: pre-wrap;
+  font:
+    13px/1.5 ui-monospace,
+    Menlo,
+    monospace;
+  margin: 0 0 12px;
+}
+.dis {
+  font-size: 12px;
+  color: var(--mut);
+  margin-top: 18px;
+}
+@media (max-width: 700px) {
+  .wrap {
+    flex-direction: column;
+  }
+  nav {
+    width: auto;
+    display: flex;
+    border-right: 0;
+    border-bottom: 1px solid var(--ln);
+    padding: 0;
+  }
+  nav button {
+    border-left: 0;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    width: auto;
+  }
+  nav button.on {
+    border-color: var(--ac);
+  }
+  main {
+    padding: 14px;
+  }
+}
+@media print {
+  header,
+  nav,
+  .np,
+  #toast {
+    display: none !important;
+  }
+  body {
+    display: block;
+  }
+  main {
+    overflow: visible;
+  }
+}
+.tag {
+  white-space: nowrap;
+}
+.row input[type="checkbox"] {
+  flex: none;
+}
+textarea {
+  resize: vertical;
+}
+#login {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: var(--bg);
+  overflow: auto;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+.lg {
+  width: 100%;
+  max-width: 460px;
+}
+.pps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.pp {
+  padding: 12px 6px;
+  border: 1px solid var(--ln);
+  border-radius: 8px;
+  background: var(--pn);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--mut);
+}
+.pp.on {
+  border-color: var(--ac);
+  color: var(--ink);
+  box-shadow: inset 0 -3px 0 var(--ac);
+}
+#who {
+  white-space: nowrap;
+}
+html[data-role="doctor"] {
+  --a1: var(--teal-1);
+  --a2: var(--teal-2);
+  --a3: var(--teal-3);
+  --a4: var(--teal-4);
+  --a5: var(--teal-5);
+  --a6: var(--teal-6);
+  --a7: var(--teal-7);
+  --a8: var(--teal-8);
+  --a9: var(--teal-9);
+  --a10: var(--teal-10);
+  --a11: var(--teal-11);
+  --a12: var(--teal-12);
+  /* teal-11 is just under 4.5:1 on white, so doctors use step 12 for accent text */
+  --ac-ink: var(--a12);
+}
+html[data-role="hospital"] {
+  --a1: var(--violet-1);
+  --a2: var(--violet-2);
+  --a3: var(--violet-3);
+  --a4: var(--violet-4);
+  --a5: var(--violet-5);
+  --a6: var(--violet-6);
+  --a7: var(--violet-7);
+  --a8: var(--violet-8);
+  --a9: var(--violet-9);
+  --a10: var(--violet-10);
+  --a11: var(--violet-11);
+  --a12: var(--violet-12);
+}
+
+button.b:hover {
+  background: var(--btn-hover);
+}
+button.g:hover {
+  background: var(--slate-4);
+}
+button.g:active {
+  background: var(--slate-5);
+}
+button.x:hover {
+  background: var(--bad-bg);
+  border-radius: 6px;
+}
+a {
+  color: var(--ac-ink);
+}
+::selection {
+  background: var(--a5);
+}
+.pp:hover {
+  background: var(--slate-3);
+}
+.pp.on {
+  background: var(--sf);
+}
+#who .tag {
+  background: var(--sf);
+  border-color: var(--a7);
+  color: var(--a12);
+}
+p.red[role="alert"]:not(:empty) {
+  background: var(--bad-bg);
+  border: 1px solid var(--bad-bd);
+  border-radius: 6px;
+  padding: 6px 10px;
+}
