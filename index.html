@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- MediFile AI: single-file app, no build step. Data stays in the browser. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <title>MediFile AI</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAV+ElEQVR42u16abBdV3Xmt9be55w7vlFv1CxblpBlZNw2sjEKk0mKpnEaQ1wk7pjQUEnRBJomXZUipuNuKk1IigCJaYZKQ8d0hzgDZUMMjg22bAx4wjJY2EJSrMka3/zeHc6w916rf5z7np6M+d2Vap06VXeffc89Z31rr+lb+5Kq4l/ywfgXflwEcBHARQAXAfy/PWw7V6LlKwL1PgHg/Pzy5epv8XPjlUMJpACgq25QQAFRKKFCIAIIKiBCLlBA9fxtvVNVAKHeWAGBkAogy89Uu1p6AAQlQIl+HsnLS/9yCOj800AEEQQAQMK9+YWApzI83NWfefybBt1aRxAIQRQEUAkVAJEBWOFJQSVkLrFBtVSUfYniS8npQn3/IqFp9axesIaqPX2TwhpYAMCMwyML+u1FfbKLKU/WIInw6KKuW4sbaiSAYXiB055l92QlWJCoCgEgJqiSkipIVe0qb1Cskv6lotNLdU0vmVweqUIUAKyBAQBM5/rwlH5zWvfO6akCMGhGFFslS1FCJHioiTc3cK7ASY9tFfQRcgXreVsSwBCxIkCViAkKVhUQUbsQ+jnpadmIV4tIF9r0SzxEFUFBgDW9melU957CPS/qw1N6JgWgMMu/j9Bfx0gNLxaoVHl9LIMH3YH+OB3Bayf5zo00DPjyjdoDsAKmnBOE0oxsafelOLyie305o6dVMUsv1DfBcu/bqY4+fBzf+Gc8dAJnW4AwoCAgwUhTL1+D3RO4dhy7hmm0Rl8/Kr/9VDi6Bj89lGM0HojlIaXvDuGWAYIgAEw9O6QVzy39n0gUgFqGrnKAlyqYLjTr83ZCACBayk2ATrf0u0fonufwncOYn1Y4hVWu6aZhvHISr95AuzfwzlEabdD55VTcupW/8oP0kfnKwKAuzvmiZQVhNrdBsSQYsvDSu10V5rxFEalhCqJqaVnYn5f+AqdcCYIAAYZAADN8V+9+PnzxJ/j+CyhOe+TBNsMrx3HlRr5ms716k9kxYfqqF3hT7jUL0ogoKCzTzpp/5LS4qsHRIptJolj/4ofp5xaRbqt86DL6vWGSAAaUSg0qQAYqUICY2P4i6WnZVHxp2XxB0lPglMfeKfnrQwKnWzdT2sq3XebfuNVeuSHeNBY1Y155RrvQhSLMpjqdy2ymLaekevOlSd0SE7YNAT/2fn2MzpLONH3TnnAdd0rsmuSzJ/COftpi4AREEABKZZTnZYuypcTn30bQZWdQBROYAaAQerGDg215to39qT6X6THVRUF/ky+t4tX9ePANtRdbksQ8GFG30CNTcqajU12dTiV1Sqz1mEaqtLbBV63h8Ro1Y3IezNg+arCQhcl+4lxnCxlOooi08NSFdBQC9JQMpuV1UICIy0TGtCpcLo970jO5gC/9UO97IRzq+BddyEMAAQkhNohNnFAnlqcjPK36xBm+exc/NRXiQd5/Vr62v1g7YCb7ePuw2dJP4zVqxERAx+lsps9M+S39ZrLBALaM2NgtudYQJcBCiqXEN1lT8W2yTgZMLwSsym5YleTZ0qp0qzjvMQC6ebjxTxYefKaNSo4qox6bWsxVq3WjokrqyTBxTIgi3H8sfLJBH7vEPDMftq7h236p0pdQ5nUu1aPz8tgpzGbS9UqMeoRGhPG6USAXjA1EE3F+YtaZpKKzrTDfr4bJK1qoCZoGKgooiGil6CGAQEpCK4mMsDqMetHI8ufunnnw3uOVdeqlqlpRERERr8gFTKVViqgGFkcx4eNPuzcMxTubfLwtm/vtnz+WPnsmDFRpuMbr+s2mPh5r0FCF+hJKLLzg2JI40f4qDyfu+JlZV2PMzPPAiFTZuIAWhpUjAMSGAEWAZ2JV6uUEAivZCxIq9RaHiQDc/4N55q4vKgECF1AIjIAFTGAFlWEJCKqGyBIH/Obe/JlfTcYaPJ+GG7fH/3obRhpUicgyFPCiXhBUugIGEosGYAn/83fXpZ6ksF/+VvevHp81/UMUBG0ZZQPosfxYR6e2JJdWeVgFCs9kVBEAol4iuyBhrdQ1EZP4wN6DPJyFDTABhpcrSUAYArUAwxsyjJMz+ra7/Yeuj48nRgSkKObFCbxAFALygANyIGOkhNxqZrN4tDC2vZPx6Z2Tr7q7+x+/mVsSdMKYNQCG7chcfuKL0x/dXB14W99HjI4LAhEbRQDs6opgZSiqBrR5IkbuSSxCgC9Pj3zFiUwvD1sCE4wGqAEePxEeP5InVc6VwIBlWEZsEDEiRkJIgBiIgSqQKCqKFLWEvmOW7jPd+96+/mvPdZ/4SQAXk3ECoEqNq+qvu6xyzafPfHBf+tr/MPbH4/prZZo+H9tftqy/dF0FgeAdnIfzKAKKgMIj98gC8oBs+cw9Uo9UpBsMQER5qpQJFUpO2AXjgw0SicRBKx7VgHqgmqO4QJRHlbxiiuawDh1w/OUw/9rtilaG3E1UqSz6g/qGqf7h2i/PtK790vRvH8cXGAYQAqy+HH0ph1vWJSBW56EeLsB4MK2iJ4rAEAOzkkeIGQYw3AvGKhp8WZAFiCIY8iDPFIiDsoCEgiKoCUhUOLD5mee1FQ/voWG8ej7kiJKnxY9M/vcPH/3prv5PxmbrBN8Q4C29rPqJAGwcTxBH4guQh3coTM/6VypCMRBZznYK0lBI8IJahHqEuDQtEACvUIUEDQoxUCNCGsACKwigAC4kCkynM56odCEK+NE6AAicpfiQ+/q8PrO79keb491H2veO9n92je6xFFn8AvYIYHI06avzUjew8eoLMPeiJxSqUEUQBIYhEDFB8nD5BL1vTx9ZpsTamE+n9JnnQ9r25FVFIIQAFYWoeibPUGKBBXmBiAHhbIezagwNSSQjdVWEmOMj7qGH8g9cmdyk0O21K+b8d+bkwCk8ucnusS/LlAlQ1ZEBOzkcLc10KLEKB2IQgxSIoIAIzHkTYkvByQfftOZ3Xjuw+lHfaxePHlRTuBAArzCKwOoViYFCwCpkoFZIBGBe6Ji8Yiiy9TgMV4lgn8z+197sv44l5BUEGomHMsOzrnNE922K9tiX5bVECEGtpfWT9Z/9OOM6SdwH70AEEkAhAjGwBqowDEtgg74KKrEXdQGWUVLEpM6IGF3t8WJRSOk8UFWohXIAsSoLWaashSJiJRrr66sk7S/P/sG+/K618RDg512MGMZ2qzacLQLLDOolWdWXYgjSI1ab1taghos2KaspMSzLoQFqDRuwBRsTsfQlWossk6pahigMQetkYuaIVZVEVSFO4QO8IBgNQGAEI8oQZQNJca6iG7eO//F7On9w8v0HO4+PxiNxVY6m2ZDdAsCZY4JwsosBY3vV6MtJT6fnxVjsvKQKZZBQtgSo1gZ6/qEKGFX1XjAQo1b1Awn6Eh/RebZW1tIJwogNjSpyQUfQdpQLnMIrBBBoUA3KsBKYYmRRqAzEn/9PuNO//+j0s2uizRIvncvlhVbjponrg0oHT8/m5mTX7O4bXwawiteqwhq6++mw90D4+DvMprUJrFVVkFLeAlTrg7261Vpm+i+3jF+zoz9YYyomML1qiEqbKlmqKu7YQGcnjYGRAA34zAG/9/GOyb0ERVAEQAAhEU/BRMQ56C3j5t4zn7n39OErGlew7S7mi2e6ErldO2pXnQyPHM8PTGfVqTZtHtm5DEDPV6DG4GN3+buekh/cbgeqWDuWUD0J0mP4lLchQRtDFFmBGVvbvO2mccurm1cQ6QXbcvaa+gXru2jt3ucsLxZSCIgQynVQKINQRLp9oGoWn/7ST76/Y3Jng4YPzP9ouDZ0aG7xf+z4nYjDA60/PdKW6Q6isOWV9V3QZUKjyz2Id98RvvotefYv7VgfKbBhrNLfX12YIRuRliQuFOjMwRo0BrhRne2E/qoJosREgCmpvV5gkAJA4RR1g5SAhOEFhQcRgoEAMIAyqa9Ev9KH7x3eK93GlWbP/dMPsB06crL1to2/esu6tz6Q3vbA9DN5MXZgLrt14s1N23Dibc8hFYbwG1/wd/2dfvDdesV6LrxGRof67MRYY+EsU0wKApOSUQLlXRSFWgsqi1sqlzEIwqpyEKuaXKowChWgEBQehYMyrPaooQIGEGyE//aBE9etuf7sbGv6hMLL1ZuuveuaTzxZfOErZ/73XHdkphOxb/77te8ClEFcvsAafOjv/F17tTIu77vBlGRSRA1j07oGYMlADSsxiMAGbJAXtJg50dRp6iTzmjl1AUFQlp/lmQdkQfOguVcvyjmwUCAtkHnkrnf2CqqATI3LaKHy6uaOR39wCicb797+zu/d+Kkf43OfevHPji8MLXSbh+bz31p385baRi/CxDYoIoO/3yefexhcoY0D2LGeAWVGCDDAlg01cAzrywK81/ZTBVHW9j7oQB87gAEDpF5zr7TcElRF08IaEiCALGGp5XGqpd0MDmBTFtm9qFAAbbeURbtHNs+ebU1S/5fe+5/fvH3y693b7zz5D6cX+7Oi+uJi2Fm//Pe2vDeolKTFGsZSqh/+DrhOsiBrh2ENhdDj8gC2bqwhSjQi9FpJBIZCWPP56c67bn9u+8aqt3HcrGo9ufnq+vUboq7TsqdbYXz2pD43423q0fVI/bf3LdDZeREADI4gpmToJTcxSdifNt7yisu6knz+N27Jm8//0cx7v3v2pzNLQ2keLXRi5+jz193etDUvgYkBWCb8zfM4XVASa26RFrLCj8vwsXVDDfWqJoARkgAp10HUpWTtEweiJ55NEVs0qhgd2HRp/Zc2IiszsSIx+Nv9xb4Hz2FhCWmBroN3xKSwYAtTtnsICIZZCglMjyX0xaveWK90/im/82vH//rIXDa3NNDNTKdbX0o7d77mtmsGtzvxlnodTAvF188oDamkhAYOTdF8WwfqpL2GNjZNVHhNMwjIBg0BIfQ8VB3ytokr3IjBwRjnrSQVzoN6LasNdeBm29mzc6a9GFwgCUFIYcBSuiyBmSGOvAOq9p1XD/7+5eGQeeT/nPvbH80faLWShRalqc3Taqfb/sTVH7h10w0ueMtmJTzYhUwPsOgghRmyTZ49hXuelPe80fqghgFg7Zp4zfqBqRmQFHAe3iMIgkAVWkgRxGUgo8H5pXrWkUJNESQoVDQShLmOb3fRTUPhoWUAEBhieGZ2eS6tAoPNt+8Z+fDbqqMbn/n7+XvvX9i/2PWdpf6FReeyWpElRdb9+DXv/+jl73DBGzovPQA769DuI1JFHeqZxvDfvqE37Za+OvkAUu2vmXWXDE6JxCFzaSHOoyjgA0JZ0gWoQB080OrUgtQTaheIGbBcqxIWO2i1EQo4ATGpMqySD3kILq+N9r/rLRt+8631+tbD32o/dN/R5+fzXNNkcR6dllLR300Jon9x3fs+uOMGJ8GQITrfXFbAViMyg0AMPidB2ER8/Jzc8oXwjY/YyCB1qEbY9cqBfRnivENLmaR5yGIpHJxTV9ZkAlVVh3Txvh8vXLJ+1AuYEHmZPrt04OmT5LoIzpJRwOciuYM1r9g28e9+ef0b3xTNTRz4m8XvP3r4cNcJhyhv2aU579Mq+1qn40brg195/Xveuv5yF4Ipk+XK7lIZvXyQ3WfC04XGh+CPk7bYFPBn5C1b9M732pEmVPHojL5ub5q0Mp7t0GKKViZpHgonmRfn4ZYdg1ijGgb7ULEQQeYwPc9LC+qdpoJCYO3QZOPG69bd/Ob1QzsWn7L77pl+/Nn5M6xRwknIsTQV8hYMEu+sS4s3bLj8L1/365f0DbsQ7HJY1GX991qMqnL7onw8R3Ve/WGVsyQdNg5+Wjc29VP/lt+5kwD6xGm57YWAudxMd+OFruk47hbaySVzofBSeHUBoiwqXkIQcQGZQ+5QFFQxuzb2XXvF0Bv2rL9x99pTydlPn/zWPeeenOl266ZasVEIyBeQThOJYY7SXKq2cttVb/roq97EhBXpV4u+ckkickpw7RJS0aXpQMcg50oM5LuKXF+/nT6wG2/fTA/k+ukpffKULJ3JMN3BUo5WgXaOrkPq0HXIHXyAChhjNbp0OL5yY+PqbQOXvmIwbGzGVVtH+NpzD9xx4qGutPrjimEWhJCSm7HSNSbmVBTKv7x+25/s/pUrh8dFZKXLpqscV1dZEbkglvFXGX4/RyR6di7QKeAcZInIMQKFFIh083p51yvo2kmKE7QzTM0V0/NuYcnlbSdZiHyoa2hGtKZhxwaTkZGkNpTkffG0wX7giYB1DsOHj3712fuPy4laNYqMBnLqNSyytCOKOTcC1R3DEx971Z5fv2QncKHiL7R7XVVlURARwBI+meKOAqQ60xY/rXwOughNiTwhkHeEOGBQRyZw2QhdMsjr6jQYoWGo3DwtgC6wBCwopjxmBItBZlMdDub1rezEUz/8hxM/ck1fSTiQhwplTIUVY5z1YNk6PPK7O/7Ve7buaka2CALA0Cq2SxdKr8u7RCUAoOzC444cf5ajq8hz6S6JzoEXgBYkAwWwkLI6q4gJNaAO1IAKUAViICIYqhjqj2nQQlKptM01BYYO/vM3H/veQZm1gxEZURIiJljHpOwRY9fI6G9tu+LmTdvHavFSoUHFMhkQE8rW/8rggt25lY30EKSEWPYIH3T4wwzPCIwoMilaKotEbVCqWqCslZlBDBOBItIIvgKtgvvENIiY80UdnqerwVtnpg/88KnvvnDQD5p4sCKRwkAshBURmo3q9RMTN2257HXj6/ti2/HBi8TMhsEES9RrFRAMkaHzMGiVMwiBfJCSEgTACerAlOgXC/qqxzEvELVOKQdyQgbOAQ8qITMQQWJ4Cw9FJmjpZMGvqZotndmjzzz30L6Ds8ijtU1pcIgCTEBM1UZl+5qR10yu2zMxubW/j4lSXyg0NmyYmMgwIoYlsoYjhiVYJrsMo0Sy2pup8FJyOi/wqlmAKmLBkaD/WOg/Zfp8Rt0cvW3ZAHggEMoucwZkQEEbDO+q085qFi2e3b//0KPPHp9Jc4zVaSDWREzVDjRqm4YGdo6uuWJkZFN/s2pNgPfqDVHFcGxgDSIi5hIARwaWKDIcMUVMq2CAccEfMKjwUqo/CJyqC0gFba8axARa9HQwCz9p6wttmk/R9fCOuKCKcD901MpkxQ+bNHTmj5w4/diBsz891UIU0XhfdaiZVKsDtcp4I9nU11jfrI02K/UE1gTiYA0lEcUGseGKocTCMltDlmGZLZFlskyl9BHBMBkmW+6OUm8DvLcCzku591R2CbxoIcgD0qBp0MzBey28dJx0HQqBF2IgMfC5O3lm4dCp+YMnl47N5C1ESV+tOdisV5JGYvvjaDA2gxXTSFCrUDXWWoJaTLWYqhHFluo2SQwrpZFhayliMkSGyDDZ3hglEkPEBINV9rMSVQnkgtDyHnBpS0ERRL3CCZxoJsg88qBF0Nxr6jXzyD2KoEEBkDXMzKIIPqgXJiWoYURGrUXEiA1FBhVDlsGk1sAyTcvh4/LwddVbK9RgEsNgEBNx6bIAU090Xg5E/BKqXQbYi/8bvQjgIoCLAC4C+P8awP8FKzCufew786UAAAAASUVORK5CYII=" />
+    <meta name="theme-color" content="#1565d8" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/palette.css" />
+    <link rel="stylesheet" href="css/polish.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to main content</a>
+    <header>
+      <button type="button" class="brand" data-a="home" aria-label="MediFile home">
+        <img class="brand-mark" data-logo="mark" alt="" width="54" height="41" />
+        <span class="brand-text"><b>MediFile</b><small>Your health records, always with you</small></span>
+      </button>
+      <a class="sos" href="tel:112" aria-label="Call emergency services on 112">SOS 112</a>
+      <details class="display-controls">
+        <summary>Display</summary>
+        <div class="display-panel">
+          <label>Theme<select id="theme" aria-label="Theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+          <label>Interface size<select id="size" aria-label="Interface size"><option value="compact">Compact</option><option value="normal">Default</option><option value="large">Large</option></select></label>
+        </div>
+      </details>
+      <select id="lang" aria-label="Language">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="te">తెలుగు</option>
+      </select>
+    </header>
+    <div class="wrap">
+      <nav id="nav"></nav>
+      <main id="main" tabindex="-1"></main>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="dlg">
+      <pre id="dp"></pre>
+      <button class="b" data-a="copy">Copy</button> <button class="g" data-a="close">Close</button>
+    </dialog>
+    <!-- Scripts share one global scope, so the order below matters. -->
+    <script src="core/logo.js"></script>
+    <script src="core/translations.js"></script>
+    <script src="core/data.js"></script>
+    <script src="core/helpers.js"></script>
+    <script src="ui/views.js"></script>
+    <script src="features/assistant.js"></script>
+    <script src="ui/events-core.js"></script>
+    <script src="features/reminders.js"></script>
+    <script src="core/i18n-extra.js"></script>
+    <script src="features/scanner.js"></script>
+    <script src="features/chat-kb.js"></script>
+    <script src="features/review-fhir.js"></script>
+    <script src="ui/events-fhir.js"></script>
+    <script src="accounts/accounts.js"></script>
+    <script src="features/vitals-extras.js"></script>
+    <script src="features/mood-chat.js"></script>
+    <script src="accounts/login-share.js"></script>
+    <script src="core/main.js"></script>
+  </body>
+</html>
